@@ -1,0 +1,16 @@
+{
+  "bytes": 4047781,
+  "sha256": "6448989f6afb677132dbc35c195920a70e78ba88ef96274585d96e677d7f2251",
+  "video_tracks": [
+    {
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "seconds": 18.9188,
+  "nmea": {
+    "GPGGA": 19,
+    "GPRMC": 19
+  },
+  "classification": "actual Pleos emulator stationary GNSS diagnostic; synthetic static GNSS input; no SDK arrival or nudge proof"
+}

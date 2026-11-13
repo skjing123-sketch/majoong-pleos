@@ -1,0 +1,134 @@
+{
+  "dataMode": "demo",
+  "cases": [
+    {
+      "id": "demo-dog-bori",
+      "species": "dog",
+      "breed": "믹스견",
+      "sex": "수컷",
+      "age": "3살",
+      "color": "밝은 갈색",
+      "features": "가상 사례 · 귀 끝이 짙은 갈색이고 초록색 목줄을 착용했습니다.",
+      "reportedDate": "2026-10-22",
+      "area": "경기도 성남시 분당구",
+      "demoName": "보리",
+      "lostDate": "2026-10-22",
+      "dateLabel": "신고일",
+      "photoUrl": null,
+      "contact": {
+        "number": "",
+        "masked": false,
+        "available": false,
+        "label": "가상 사례 · 연락처 없음"
+      },
+      "status": "unknown",
+      "sourceUrl": "https://www.animal.go.kr/front/awtis/loss/lossList.do?menuNo=1000100000"
+    },
+    {
+      "id": "demo-cat-nabi",
+      "species": "cat",
+      "breed": "코리안 쇼트헤어",
+      "sex": "암컷",
+      "age": "2살",
+      "color": "삼색",
+      "features": "가상 사례 · 코 옆에 검은 점이 있고 낯선 소리에 쉽게 숨습니다.",
+      "reportedDate": "2026-10-21",
+      "area": "경기도 성남시 수정구",
+      "demoName": "나비",
+      "lostDate": "2026-10-21",
+      "dateLabel": "신고일",
+      "photoUrl": null,
+      "contact": {
+        "number": "",
+        "masked": false,
+        "available": false,
+        "label": "가상 사례 · 연락처 없음"
+      },
+      "status": "unknown",
+      "sourceUrl": "https://www.animal.go.kr/front/awtis/loss/lossList.do?menuNo=1000100000"
+    },
+    {
+      "id": "demo-dog-dubu",
+      "species": "dog",
+      "breed": "말티즈",
+      "sex": "수컷",
+      "age": "5살",
+      "color": "흰색",
+      "features": "가상 사례 · 작은 체구이며 파란색 하네스를 착용했습니다.",
+      "reportedDate": "2026-10-20",
+      "area": "경기도 성남시 중원구",
+      "demoName": "두부",
+      "lostDate": "2026-10-20",
+      "dateLabel": "신고일",
+      "photoUrl": null,
+      "contact": {
+        "number": "",
+        "masked": false,
+        "available": false,
+        "label": "가상 사례 · 연락처 없음"
+      },
+      "status": "unknown",
+      "sourceUrl": "https://www.animal.go.kr/front/awtis/loss/lossList.do?menuNo=1000100000"
+    },
+    {
+      "id": "demo-cat-dal",
+      "species": "cat",
+      "breed": "코리안 쇼트헤어",
+      "sex": "수컷",
+      "age": "4살",
+      "color": "검정과 흰색",
+      "features": "가상 사례 · 앞발 끝이 흰색이고 꼬리가 길어요.",
+      "reportedDate": "2026-10-22",
+      "area": "서울특별시 성동구",
+      "demoName": "달이",
+      "lostDate": "2026-10-22",
+      "dateLabel": "신고일",
+      "photoUrl": null,
+      "contact": {
+        "number": "",
+        "masked": false,
+        "available": false,
+        "label": "가상 사례 · 연락처 없음"
+      },
+      "status": "unknown",
+      "sourceUrl": "https://www.animal.go.kr/front/awtis/loss/lossList.do?menuNo=1000100000"
+    },
+    {
+      "id": "demo-dog-hae",
+      "species": "dog",
+      "breed": "시바견",
+      "sex": "암컷",
+      "age": "2살",
+      "color": "갈색",
+      "features": "가상 사례 · 꼬리가 말려 있고 빨간 인식표를 달고 있습니다.",
+      "reportedDate": "2026-10-21",
+      "area": "부산광역시 해운대구",
+      "demoName": "해리",
+      "lostDate": "2026-10-21",
+      "dateLabel": "신고일",
+      "photoUrl": null,
+      "contact": {
+        "number": "",
+        "masked": false,
+        "available": false,
+        "label": "가상 사례 · 연락처 없음"
+      },
+      "status": "unknown",
+      "sourceUrl": "https://www.animal.go.kr/front/awtis/loss/lossList.do?menuNo=1000100000"
+    }
+  ],
+  "meta": {
+    "fetchedAt": "2026-10-23T18:03:48+09:00",
+    "windowStart": "2026-09-24",
+    "windowEnd": "2026-10-23",
+    "regionFilter": "",
+    "completionNotice": "이 API에는 발견 완료 상태가 없어 현재도 찾는 중인지 확인되지 않습니다. 공고의 최신 상태는 공식 원문 또는 신고자에게 확인하세요.",
+    "page": 1,
+    "pageSize": 50,
+    "returnedCount": 5,
+    "providerTotalCount": null,
+    "filterKind": "none",
+    "coverageNote": "모든 내용이 가상인 시연용 공고입니다. 실제 실종 신고나 연락처가 아닙니다.",
+    "cached": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "majoong-pleos",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 scripts/run_local.py",
+    "test": "node --test tests/*.test.mjs tests/web/*.test.mjs",
+    "test:backend": "python3 -m unittest discover -s tests/backend -v",
+    "test:tools": "python3 -m unittest discover -s tests/tools -v"
+  }
+}

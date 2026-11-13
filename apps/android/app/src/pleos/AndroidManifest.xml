@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:name="android.hardware.type.automotive" android:required="true" />
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE" />
+    <uses-permission android:name="android.car.permission.CAR_SPEED" />
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application>
+        <service android:name=".MonitoringService" android:exported="false"
+            android:foregroundServiceType="specialUse" android:stopWithTask="false">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="User-started trip session receiving Pleos destination-arrival callbacks and AAOS parking safety state while navigation is visible, to offer missing-pet notices only after parking. Shows an ongoing stop control; ends on user stop or task removal. Does not perform navigation or continuous location tracking." />
+        </service>
+        <!-- Pleos 2.1 supplies android.car through its boot class path APEX module. -->
+        <!-- No distractionOptimized declaration: the product is for parked use. -->
+    </application>
+</manifest>

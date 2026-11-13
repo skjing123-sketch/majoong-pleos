@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-13",
+  "command": "perl tools/pleos-trial/mock_tests.pl",
+  "passed": 123,
+  "failed": 0,
+  "original_cases": 117,
+  "new_configuration_cases": 6,
+  "kind": "local parser/transport/configuration and argument validation only",
+  "actual_device_execution": false,
+  "adb_gnss_emulator_started": false,
+  "shell_syntax_check": "passed"
+}

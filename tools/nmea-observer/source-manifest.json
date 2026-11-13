@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "path": "AndroidManifest.xml",
+      "sha256": "63b179dd2859521a9c4743e72bbb974a5454fc69f41a36e22f43c511d3d690be",
+      "bytes": 1391
+    },
+    {
+      "path": "src/ai/nearby/reunion/nmeaprobe/MainActivity.java",
+      "sha256": "af5d47af5adac1b62b3227cbde089bf5a317cd2efe60bf45223e114b726f1ebf",
+      "bytes": 3822
+    },
+    {
+      "path": "src/ai/nearby/reunion/nmeaprobe/NmeaProbeService.java",
+      "sha256": "6dde69857b55e683ef0b60965e656247e661ad5d5dec41ae7b227a695754b883",
+      "bytes": 7111
+    },
+    {
+      "path": "src/ai/nearby/reunion/nmeaprobe/NmeaSummary.java",
+      "sha256": "3bf17b7e84743f61a287abf88c348a6e17675cd954cb4222df665ebad43898e0",
+      "bytes": 2144
+    },
+    {
+      "path": "tests/ai/nearby/reunion/nmeaprobe/NmeaSummaryTest.java",
+      "sha256": "735160815f527f7e3d3bd9001479cf44455b36c71349825c3209a7b42c8851d1",
+      "bytes": 2274
+    }
+  ],
+  "contains_binaries": false,
+  "published_copy_build_executed": false
+}

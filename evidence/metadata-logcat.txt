@@ -1,0 +1,58 @@
+--------- beginning of main
+         1794487578.826 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487578.826 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487578.837 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487579.791 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487579.791 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487579.846 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487580.843 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487580.844 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487581.012 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487581.928 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487581.929 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487581.982 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487582.999 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487583.000 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487583.064 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487584.191 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487584.192 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487584.247 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487585.173 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487585.174 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487585.218 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487586.239 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487586.241 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487586.295 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487587.423 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487587.424 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487587.482 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487588.486 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487588.487 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487588.545 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487589.561 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487589.562 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487589.613 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487590.710 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487590.711 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487590.766 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487591.772 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487591.772 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487591.843 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487592.860 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487592.861 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487592.910 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487594.010 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487594.011 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487594.060 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487595.024 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487595.026 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487595.073 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487596.071 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487596.071 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487596.121 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487597.193 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487597.195 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487597.244 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true
+         1794487598.127 19836 19836 I MajoongNmeaProbe: usedInFix=0
+         1794487598.128 19836 19836 I MajoongNmeaProbe: sentenceType=GPGGA length=66 checksumValid=true
+         1794487598.179 19836 19836 I MajoongNmeaProbe: sentenceType=GPRMC length=69 checksumValid=true

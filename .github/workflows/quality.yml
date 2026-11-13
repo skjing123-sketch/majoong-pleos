@@ -1,0 +1,59 @@
+name: Quality gate
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  web-backend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: npm test
+      - run: python -m unittest discover -s tests/backend -v
+      - run: python -m unittest discover -s tests/tools -v
+      - run: cd tools/pleos-trial && perl mock_tests.pl
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Android platform
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Native tests and release build
+        run: sh scripts/build_android.sh pleos release
+      - name: Package aligned unsigned build for local signing
+        run: |
+          mkdir -p ci-output
+          cp apps/android/app/build/outputs/apk/pleos/release/*-unsigned.apk ci-output/majoong-pleos-release-unsigned.apk
+          cp "$ANDROID_HOME/build-tools/35.0.0/lib/apksigner.jar" ci-output/apksigner.jar
+          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -c -v 4 ci-output/majoong-pleos-release-unsigned.apk
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        if: always()
+        with:
+          name: android-release-and-test-results
+          path: |
+            ci-output/
+            apps/android/app/build/test-results/
+          retention-days: 7
