@@ -278,7 +278,7 @@ class MainActivity : Activity() {
         if (type == "vehicle") {
             displayAllowed = event.optBoolean("displayAllowed", false)
             if (BuildConfig.DEBUG) {
-                val summary = "vehicle_gate allowed=$displayAllowed gear=${event.optString("gear")} speed=${event.opt("speedMetersPerSecond")} reason=${event.optString("reason")}" 
+                val summary = "vehicle_gate allowed=$displayAllowed gear=${event.optString("gear")} speed=${event.opt("speedMetersPerSecond")} reason=${event.optString("reason")}"
                 if (summary != lastGateReport) { lastGateReport = summary; Log.i("MajoongProbe", summary) }
             }
             if (BuildConfig.PLATFORM_MODE == "pleos") {
