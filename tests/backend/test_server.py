@@ -373,6 +373,14 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(json.loads(data)["error"]["code"], "API_KEY_MISSING")
         self.assertEqual(self.request("/api/cases?mode=demo")[0], 200)
 
+    def test_health_revision_freezes_startup_identity_without_disclosing_location(self):
+        before = json.loads(self.request("/api/health")[2])["uiRevision"]
+        self.assertRegex(before, r"^[a-f0-9]{64}$")
+        (Path(self.directory.name) / "style.css").write_text("body{color:blue}")
+        after = json.loads(self.request("/api/health")[2])["uiRevision"]
+        self.assertEqual(before, after)
+        self.assertNotIn(self.directory.name, after)
+
     def test_external_origin_host_and_traversal_rejected(self):
         for headers in ({"Host": "evil.invalid"}, {"Origin": "https://evil.invalid"}, {"Sec-Fetch-Site": "cross-site"}):
             self.assertEqual(self.request("/api/health", headers)[0], 403)

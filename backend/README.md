@@ -6,7 +6,7 @@
 
 ## API
 
-- `GET /api/health`: `ok`, `keyConfigured`.
+- `GET /api/health`: `ok`, `keyConfigured`, `uiRevision`. `uiRevision`은 시작 시점 `web/`의 제공 가능한 정적 UI 파일과 로드된 백엔드 코드(`server.py`·`breed_catalog.py`)로 만든 SHA-256이다. 서버 생성 때 고정하므로 실행 중 파일을 바꿔도 새 버전이라고 주장하지 않는다. 경로·키·실공고는 해시에 넣거나 응답하지 않는다. 런처는 값이 없거나 현재 checkout과 다르면 기존 서버를 재사용하지 않고 다른 포트 실행을 안내한다.
 - `GET /api/cases?mode=demo&region=경기도`: 가상의 성남 공고 3건. 모든 데모 번호·사진 URL은 비어 있습니다.
 - `GET /api/cases?mode=live&region=경기도`: 최근 30일 실제 공고. 시도명은 공식 `lossInfoSido`에서 코드를 조회하여 `upr_cd`로 전달합니다. 시도 코드가 일치하지 않는 지역명은 주소와 관할지의 문자열로만 필터링합니다.
 - `region=성남시` 또는 성남시의 구 이름까지 주어진 경우에는 경기도 힌트로 시도 코드를 먼저 조회하고, 공식 `lossInfoSigungu`에 이름이 정확히 일치하는 시군구가 있으면 해당 `org_cd`로 범위를 좁힌 뒤 조회합니다. 정확한 코드가 없으면 경기도 범위 안에서 주소 문자열을 필터링합니다.

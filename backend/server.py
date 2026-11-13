@@ -56,6 +56,36 @@ REGION_ALIASES = {
 # A city-name hint narrows this prototype's destination before paging. Actual
 # province/district codes are always resolved from the provider, never invented.
 REGION_PROVINCE_HINTS = {"성남시": "경기도"}
+UI_FILE_SUFFIXES = {".html", ".css", ".js", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".woff", ".woff2"}
+# Capture the code accompanying this import, before a long-running process can
+# observe newer source files on disk. Only these two known application modules.
+_backend_source = Path(__file__).resolve()
+BACKEND_CODE_REVISION = hashlib.sha256(
+    _backend_source.read_bytes() + b"\0" + _backend_source.with_name("breed_catalog.py").read_bytes()
+).digest()
+
+
+def ui_revision(web_root: Path) -> str:
+    """Fingerprint UI and loaded backend version; no account paths, API data or credentials."""
+    root = Path(web_root).resolve()
+    if not (root / "index.html").is_file():
+        raise FileNotFoundError("UI entry point unavailable")
+    digest = hashlib.sha256()
+    digest.update(BACKEND_CODE_REVISION)
+    for path in sorted(root.rglob("*")):
+        relative = path.relative_to(root)
+        if any(part.startswith(".") for part in relative.parts) or not path.is_file():
+            continue
+        target = path.resolve()
+        if root not in target.parents:
+            continue
+        if target.suffix.lower() not in UI_FILE_SUFFIXES and target != root / "offline-demo.json":
+            continue
+        name = relative.as_posix().encode("utf-8")
+        data = target.read_bytes()
+        digest.update(len(name).to_bytes(8, "big")); digest.update(name)
+        digest.update(len(data).to_bytes(8, "big")); digest.update(data)
+    return digest.hexdigest()
 
 
 class APIError(Exception):
@@ -484,6 +514,9 @@ class LocalServer(ThreadingHTTPServer):
 
     def __init__(self, address, handler, state):
         self.state = state
+        # Freeze startup identity. Editing files cannot upgrade this process's
+        # already-loaded backend or make its health claim the new revision.
+        self.ui_revision = ui_revision(state.web_root)
         super().__init__(address, handler)
 
     def handle_error(self, request, client_address):
@@ -547,7 +580,8 @@ class Handler(BaseHTTPRequestHandler):
             value = lambda key, default="": query.get(key, [default])[0]
             if parsed.path == "/api/health":
                 self._json(200, {"ok": True, "keyConfigured": self.server.state.provider.configured,
-                                 "service": "arrival-pet-prototype", "liveDataUsesMemoryOnly": True})
+                                 "service": "arrival-pet-prototype", "liveDataUsesMemoryOnly": True,
+                                 "uiRevision": self.server.ui_revision})
             elif parsed.path == "/api/cases":
                 mode = value("mode", "live")
                 page = value("page", "1")
@@ -566,7 +600,7 @@ class Handler(BaseHTTPRequestHandler):
                 relative = "index.html" if path == "/" else path.lstrip("/")
                 root = self.server.state.web_root
                 target = (root / relative).resolve()
-                permitted_file = target.suffix.lower() in {".html", ".css", ".js", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".woff", ".woff2"}
+                permitted_file = target.suffix.lower() in UI_FILE_SUFFIXES
                 permitted_file = permitted_file or target == root / "offline-demo.json"
                 if (root not in target.parents or any(part.startswith(".") for part in Path(relative).parts)
                         or not permitted_file

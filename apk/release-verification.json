@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0-pleos",
+  "applicationId": "ai.nearby.reunion",
+  "sourceCommit": "3c9b44919cbf01db57c6e812dd0ec393b0cef259",
+  "ciRun": "https://github.com/skjing123-sketch/majoong-pleos/actions/runs/43415674452",
+  "nativeTests": {
+    "tests": 73,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "apkBytes": 6895026,
+  "apkSha256": "38ce56b4ce22f74492a69a698b77329d0c0cbd2ed9cb0b586cbe861f7fc21db0",
+  "signatureScheme": "v3",
+  "certificateSha256": "00caaad19b977efdb5fea64c788f14d69fa3c832c5b99401516010e2582aaf20",
+  "alignment": "unsigned APK passed official zipalign -c -v 4 in CI before signing",
+  "webAssetCount": 19,
+  "webMismatchCount": 0,
+  "webMissingCount": 0,
+  "vehicleSampleAudit": false,
+  "actualSdkArrivalTested": false,
+  "actualPhotoNudgeTested": false
+}

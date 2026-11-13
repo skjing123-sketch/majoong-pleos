@@ -40,6 +40,11 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+      - name: NMEA metadata checks
+        run: |
+          mkdir -p "$RUNNER_TEMP/nmea-checks"
+          javac -d "$RUNNER_TEMP/nmea-checks" tools/nmea-observer/src/ai/nearby/reunion/nmeaprobe/NmeaSummary.java tools/nmea-observer/tests/ai/nearby/reunion/nmeaprobe/NmeaSummaryTest.java
+          java -cp "$RUNNER_TEMP/nmea-checks" ai.nearby.reunion.nmeaprobe.NmeaSummaryTest
       - name: Android platform
         run: |
           sdk_dir="$RUNNER_TEMP/android-sdk"

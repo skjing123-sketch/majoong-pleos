@@ -21,7 +21,7 @@ python scripts/run_local.py --demo
 
 ## Pleos 설치와 빌드
 
-- Android SDK platform 35 / build-tools 35.0.0, JDK 17
+- Android SDK platform 35 / build-tools 35.0.0, JDK 17+(CI JDK21)
 - 공식 Pleos Connect emulator **2.1.0**, 공식 NaviHelper **3.0.5**
 - 공식 Maven: `https://nexus-playground.pleos.ai/repository/maven-releases/`
 - 차량 상태: Android Automotive Car API (`android.car`), SDK의 실제 paired read
@@ -66,6 +66,8 @@ python -m unittest discover -s tests/backend -v
 python -m unittest discover -s tests/tools -v
 (cd tools/pleos-trial && perl mock_tests.pl)
 ```
+
+현재 검사: 웹121/121 · 백엔드34/34 · 네이티브73/73 · Python 도구17/17 · Perl123/123 · NMEA메타데이터16/16 통과입니다.
 
 최신 결과는 [기능 점검 보고서](docs/functional-audit-2026-11-13.md), [소스 복구·기존 시험 증거](docs/source-provenance.md), [진단 도구](tools/README.md), GitHub Actions에서 확인할 수 있습니다. 자동화 테스트 통과와 실제 차량/SDK 통합 성공은 별개입니다.
 
