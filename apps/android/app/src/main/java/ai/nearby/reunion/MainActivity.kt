@@ -124,7 +124,7 @@ class MainActivity : Activity() {
                     offline = true
                     receive(nativeEvent("server", "offline" to true,
                         "message" to "서버 미연결 · 번들 화면만 사용"))
-                    web.loadUrl("https://appassets.androidplatform.net/?platform=android&offline=1")
+                    web.loadUrl(LocalWebPages.offline(BuildConfig.PLATFORM_MODE))
                 }
             }
         }
