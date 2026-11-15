@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "state": "ready",
+  "dataMode": "api_snapshot",
+  "capturedAt": "2026-11-15T23:07:02+09:00",
+  "region": "서울특별시",
+  "sourceUrl": "https://www.animal.go.kr/front/awtis/loss/lossList.do?menuNo=1000100000",
+  "cases": [
+    {
+      "reference": "53062ce965f0f8bba75e798dba6f05d8b916e730b57c992e5a50ee45bf846531",
+      "species": "cat",
+      "breed": "한국 고양이",
+      "reportedDate": "2026-10-21",
+      "region": "서울특별시 마포구",
+      "features": "털색: 기타 · 수컷",
+      "photo": "assets/actual-notice-photo.jpg",
+      "photoSha256": "0e9f5ed25cadd8c5a425aab3b8dfbbb3069f32e97564015e9f3f5600d26dd06d"
+    }
+  ],
+  "mockup": {
+    "image": "assets/majoong-pleos-live-case-placement.png",
+    "mode": "layout_concept",
+    "width": 1920,
+    "height": 1080,
+    "popupAreaFraction": 0.1,
+    "navigationRegion": "서울특별시 강남구"
+  }
+}

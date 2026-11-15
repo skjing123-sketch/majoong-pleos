@@ -1,0 +1,58 @@
+{
+  "artifactKind": "layout_concept_with_real_api_notice",
+  "actualSdkCapture": false,
+  "providerService": "https://www.data.go.kr/data/15141910/openapi.do",
+  "providerFetchedAt": "2026-11-15T23:07:01+09:00",
+  "retrievedAt": "2026-11-15T23:07:02+09:00",
+  "queryRegion": "서울특별시",
+  "coverage": {
+    "returnedCount": 18,
+    "providerTotalCount": 36,
+    "filterKind": "provider_codes",
+    "windowStart": "2026-10-17",
+    "windowEnd": "2026-11-15",
+    "page": 1,
+    "pageSize": 50,
+    "textFilterApplied": false
+  },
+  "publicCaseReference": "53062ce965f0f8bba75e798dba6f05d8b916e730b57c992e5a50ee45bf846531",
+  "noticeStatus": "unknown",
+  "dateMeaning": "실종일 (happenDt)",
+  "lostDate": "2026-10-21",
+  "photo": {
+    "file": "assets/actual-notice-photo.jpg",
+    "sha256": "0e9f5ed25cadd8c5a425aab3b8dfbbb3069f32e97564015e9f3f5600d26dd06d",
+    "width": 901,
+    "height": 1600,
+    "metadataRemoved": true,
+    "decodedPixelsUnchanged": true,
+    "uiFramingCrop": {
+      "x": 420,
+      "y": 440,
+      "width": 470,
+      "height": 550
+    }
+  },
+  "navigation": {
+    "sourcePage": "https://www.hyundaimotorgroup.com/ko/news/hyundai-motor-group-redefines-in-vehicle-experience-with-pleos-connect-next-generation-infotainment-system",
+    "sourceImage": "https://www.hyundaimotorgroup.com/image/upload/asset_library/MDA00000000000078920/00b8ec3b0fe040b0a61fb7e0519ef74c.jpg",
+    "originalPngSha256": "e6e4012c9281e7c9a0520fac426470750a0041249ed50c2aa3bf7104ff4f88bb",
+    "mapRegion": "서울특별시 강남구",
+    "noticeRegion": "서울특별시 마포구",
+    "parkedStateReconstructed": true
+  },
+  "composition": {
+    "file": "assets/majoong-pleos-live-case-placement.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "d696db4d002b329a6ebdb442474738a59793ccbd0084d1aeb5e76dd2558e90b4",
+    "popup": {
+      "x": 1320,
+      "y": 576,
+      "width": 576,
+      "height": 360,
+      "screenAreaFraction": 0.1
+    }
+  },
+  "implementation": "Concept proposes a full-navigation photo popup. Current APK displays photo guidance in the Majoong app pane. Actual arrival-to-park-to-photo integration is unverified."
+}
