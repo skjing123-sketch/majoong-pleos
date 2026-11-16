@@ -90,9 +90,3 @@ python -m unittest discover -s tests/tools -v
 - `apk/`: 서명된 release APK와 검증 기록
 
 SDK·AVD·캐시·서명키·API키·실공고 원문·원격 접속 정보는 업로드하지 않습니다. 공식 SDK는 Gradle이 공식 저장소에서 받습니다.
-
-## 공모전 제출
-
-공식 제출 안내: https://appdevchallenge.auto-hmg.io/guide/submission
-
-접수양식/팀원 동의·서명·날짜가 필요하며 메일 제출은 별도입니다. GitHub 업로드는 접수 완료가 아닙니다. 비공개 저장소는 11월 16일까지 공개로 전환하고 11월 23일까지 유지해야 개발 산출물 가산점 조건을 충족합니다. 공개 전환은 이 작업에서 수행하지 않았습니다. 최종 제출에는 저장소 URL과 최종 commit hash를 적으세요.
