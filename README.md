@@ -66,8 +66,7 @@ adb install -r apk/TEAM_마중_release.apk
 
 실제 Galaxy MacBook Air(M4/16GB)와 외장 APFS에서 공식 Pleos 2.1.0을 시험했습니다. 실제 Android 캡처는 **2560×1440**, 영상 인코딩은 별도로 **1920×1080**을 지정했습니다. density는 보존 증거에서 확인하지 못했습니다. 주행·도착·P단·사진을 함께 보여 주는 실제 연속 시연 영상은 아직 없습니다.
 
-2026-11-12 정지 GNSS 시험에서 GPGGA 19개·GPRMC 19개의 실제 Android 콜백과 정상 체크섬을 확인했습니다. 이 입력은 합성 GNSS이며 실도로 주행이나 NaviHelper 도착 성공 증거가 아닙니다. 실제 환경은 내부 여유 공간 부족으로 중단했습니다. 기존 사용자 작업은 종료하지 않았습니다.
-
+2026-11-12 정지 GNSS 시험에서 GPGGA 19개·GPRMC 19개의 실제 Android 콜백과 정상 체크섬을 확인했습니다.
 ```sh
 npm test
 python -m unittest discover -s tests/backend -v
